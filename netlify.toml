@@ -1,0 +1,13 @@
+[build]
+  # Tentukan perintah build yang ingin dijalankan
+  command = "npm install && npm run build"
+
+  # Tentukan direktori output (jika ada)
+  publish = "public"  # Ganti dengan folder tempat hasil build
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[context.production.environment]
+  # Menambahkan environment variables jika perlu
+  NODE_ENV = "production"
